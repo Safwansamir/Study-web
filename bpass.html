@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Validation</title>
+  <style>
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Password Validation</h1>
+
+  <input type="password" id="password">
+  <button type="button" id="submit">Submit</button>
+
+  <p id="message"></p>
+
+  <script>
+    const submitButton = document.getElementById("submit");
+    const messageElement = document.getElementById("message");
+
+    submitButton.addEventListener("click", function() {
+      const password = document.getElementById("password").value;
+
+      if (password == "123") {
+        messageElement.innerHTML = "Your password is correct!";
+        messageElement.classList.add("correct");
+      } else {
+        messageElement.innerHTML = "Your password is incorrect!";
+        messageElement.classList.add("incorrect");
+      }
+    });
+  </script>
+</body>
+</html>

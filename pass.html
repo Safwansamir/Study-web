@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <label for="password">Password</label>
+<input id="pass" name="password" placeholder="Password" type="number">
+<p id="wrong" style="display: none; color: red;">You're password is wrong!</p>
+<p id="right" style="display: none; color: green;">You're password is right!</p>
+<br>
+<button onclick="sub()">Submit</button>
+<script>
+ 
+  function sub() {
+     var pass = document.getElementById("pass").value
+     
+     var cpass = "123"
+    if(pass === cpass) {
+      document.getElementById("right").display.block
+    } else {
+      document.getElementById("wrong").display.block
+    }
+  }
+</script>
+</body>
+
+</html>
